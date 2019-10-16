@@ -111,24 +111,6 @@ class BinarySearchTree{
             return node; 
         }
     }
-
-
-    isValidBST(node, min = null, max = null) {
-    if (!node) return true;
-    if (max !== null && node.data >= max) {
-    return false;
-    }
-    if (min !== null && node.data <= min) {
-    return false;
-    }
-    const leftSide = this.isValidBST(node.left, min, node.data);
-    const rightSide = this.isValidBST(node.right, node.val, max);
-
-    return leftSide && rightSide;
-
-    }
-
-
 }
 
 var BST = new BinarySearchTree;
