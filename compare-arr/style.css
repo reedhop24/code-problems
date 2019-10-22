@@ -1,0 +1,61 @@
+body{
+    background-color:darkgrey;
+}
+h1{
+    background-color:darkcyan;
+    text-align:center;
+    font-size: 60px;
+    padding:30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius:25px;
+    box-shadow: 5px 10px #888888;
+    text-shadow: 2px 4px #888888
+}
+
+#line{
+    font-size:40px;
+    text-align:center;
+    color:darkkhaki;
+    font-weight:bold;
+    padding:40px;
+}
+
+h2{
+    background-color:darkcyan;
+    text-align:center;
+    font-size: 35px;
+    border-radius:25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 5px 10px #888888;
+    text-shadow: 2px 4px #888888;
+}
+
+#button{
+    background-color:darkkhaki;
+    height:30px;
+    border-radius:25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: center;
+}
+
+#input{
+    border-radius:25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 5px 10px #888888;
+    text-shadow: 2px 4px #888888;
+    background-color:darkcyan;
+    padding-left: 42%;
+    font-size:20px;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+
+#kevin{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+}
+
+/* #main{
+    margin-right: 0px;
+    margin-left: auto;
+} */
