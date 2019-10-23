@@ -14,7 +14,16 @@ class Stack{
       return 'The stack is empty';
     }
     else{
-      this.stack.pop();
+      return this.stack.pop();
+    }
+  }
+
+  peek(){
+    if(this.isEmpty() === true) {
+      return 'The stack is empty';
+    }
+    else{
+      return this.stack[this.stack.length - 1];
     }
   }
 
@@ -37,9 +46,11 @@ newStack.push(6);
 console.log(newStack.stack);
 
 //Testing Stack Pop
-newStack.pop();
-console.log(newStack.stack);
 
+console.log(newStack.pop());
+console.log(newStack.stack);
+console.log(newStack.peek());
+console.log(newStack.stack);
 // Testing Stack Pop With Empty Array
 newStack.stack = [];
 console.log(newStack.pop());
