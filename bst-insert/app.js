@@ -1,4 +1,6 @@
 class Node{
+    // The below constructor initializes the tree with a data element which is passed when data is passed into the
+    // object the left and right are set to null to initialize null elements.
     constructor(data, left = null, right = null){
         this.data = data,
         this.left = null,
@@ -7,24 +9,34 @@ class Node{
 }
 
 class BinarySearchTree {
+    // The constructor below initializes the root node as null while no data has been passed in.
     constructor() {
       this.root = null;
     }
+
     add(data) {
+      // Set the data to the root if the current root is null (empty tree)
       const node = this.root;
       if (node === null) {
         this.root = new Node(data);
         return;
       } else {
+        // If the current root is not empty create the function SearchTree
         const searchTree = function(node) {
+          // If data entered into the object is less than the root the data goes to the left
           if (data < node.data) {
+            // Once the node is null the data has found its position and it returns the new Node class to fill its position
+            // the function uses recursion until it has found its position
             if (node.left === null) {
               node.left = new Node(data);
               return;
             } else if (node.left !== null) {
               return searchTree(node.left);
             }
+            // If data entered into the object is greater than the root the data passed in goes to the right
           } else if (data > node.data) {
+            // Once the node is null the data has found its position and it returns the new Node class to fill its position
+            // the function uses recursion until it has found its position
             if (node.right === null) {
               node.right = new Node(data);
               return;
@@ -39,11 +51,11 @@ class BinarySearchTree {
       }
     }
     
-    inorder(node) {
+    inOrder(node) {
         if (node !== null) {
-            this.inorder(node.left);
+            this.inOrder(node.left);
             console.log(node.data);
-            this.inorder(node.right);
+            this.inOrder(node.right);
         }
     }
 
@@ -82,7 +94,7 @@ BST.add(27);
 
 root = BST.getRootNode();
 
-console.log(BST.inorder(root));
+console.log(BST.inOrder(root));
 console.log(BST.minNode());
 console.log(BST.maxNode());
 
