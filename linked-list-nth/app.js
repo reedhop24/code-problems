@@ -24,6 +24,19 @@ class LinkedList {
         this.length--;
         return value;
     }
+
+    findNth(val){
+        let thisNode = this.head;
+        let len = this.length;
+        while(thisNode) {
+        if(len === val) {
+            return thisNode;
+        }
+        len--;  
+        thisNode = thisNode.next;
+    }
+    return thisNode;
+    }
 }
 
 const list = new LinkedList('first')
@@ -31,8 +44,7 @@ const list = new LinkedList('first')
     .addToHead('third')
     .addToHead('fourth');
     
-    console.log(list.removeHead());
-
-
-    
-   
+    console.log(list.findNth(1));
+    console.log(list.findNth(2));
+    console.log(list.findNth(3));
+    console.log(list.findNth(4));
