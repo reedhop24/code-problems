@@ -44,6 +44,7 @@ const list = new LinkedList('first')
     .addToHead('third')
     .addToHead('fourth');
     
+    console.log(list);
     console.log(list.findNth(1));
     console.log(list.findNth(2));
     console.log(list.findNth(3));
