@@ -1,5 +1,8 @@
 'use-strict'
 
+var reversed = [];
+var regular = [];
+
 class LinkedList {
     constructor(value){
         this.head = null;
@@ -12,6 +15,7 @@ class LinkedList {
         newNode.next = this.head;
         this.head = newNode;
         this.length++;
+        regular.unshift(newNode.value);
         return this;
     }
 
@@ -38,9 +42,15 @@ class LinkedList {
             p2.next = p1;
             p1 = p2;
             p2 = p3;
+            reversed.unshift(p1.value);
         }
         this.head = p1;
         return this;
+    }
+
+    isPalindrome(){
+        if(reversed.join('') === regular.join('')) return true;
+        return false; 
     }
 }
 
@@ -48,12 +58,6 @@ class LinkedList {
 const list = new LinkedList('d')
     .addToHead('e')
     .addToHead('e')
-    .addToHead('r');
+    .addToHead('d');
     list.reverseLinkedList();
-    console.log(list);
-
-
-
-
-    
-    
+    console.log(list.isPalindrome());
