@@ -1,14 +1,15 @@
 'use-strict'
 
 class LinkedList {
+
     constructor(value){
-        this.value = null;
+        this.head = null;
         this.length = 0;
         this.addToHead(value);
     }
 
     addToHead(value){
-        var newNode = { value };
+        var newNode = {value};
         newNode.next = this.head;
         this.head = newNode;
         this.length++;
@@ -25,19 +26,20 @@ class LinkedList {
         return value;
     }
 
-    findNth(val){
-        let thisNode = this.head;
-        let len = this.length;
-        while(thisNode) {
-        if(len === val) {
-            return thisNode;
+    findNth(value){
+        var currentNode = this.head;
+        var len = this.length;
+        while(currentNode){
+            if(len === value){
+                return currentNode;
+            }
+            len--;
+            currentNode = currentNode.next;
         }
-        len--;  
-        thisNode = thisNode.next;
-    }
-    return thisNode;
+        return currentNode;
     }
 }
+
 
 const list = new LinkedList('first')
     .addToHead('second')
