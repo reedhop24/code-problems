@@ -1,6 +1,6 @@
 'use-strict';
 
-var binarySort = (arr, target) => {
+var binarySearch = (arr, target) => {
     arr = arr.sort();
     let left = 0;
     let right = arr.length - 1;
@@ -19,9 +19,9 @@ var binarySort = (arr, target) => {
 }
 
 // Should return 1
-console.log(binarySort([1,2,3,4,5,6], 2));
+console.log(binarySearch([1,2,3,4,5,6], 2));
 
 // Unsorted should return 6
-console.log(binarySort([3,5,8,1,2,4,6], 8));
+console.log(binarySearch([3,5,8,1,2,4,6], 8));
 
 
