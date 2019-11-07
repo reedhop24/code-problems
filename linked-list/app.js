@@ -32,6 +32,3 @@ var list = new linkedlist('first')
     .addToHead('fourth');
 
     console.log(list);
-    console.log(list.removeHead());
-    console.log(list);
-    
