@@ -8,10 +8,10 @@ class linkedlist{
     }
 
     addToHead(value){
-        let newNode = {value};
-        newNode.next = this.head;
-        this.head = newNode;
-        this.length++;
+        let current = {value};
+        current.next = this.head;
+        this.head = current;
+        this.length--;
         return this;
     }
 
@@ -19,10 +19,10 @@ class linkedlist{
         if(this.length === 0){
             return undefined;
         }
-        let value = this.head;
+        let current = this.head;
         this.head = this.head.next;
         this.length--;
-        return value;
+        return current;
     }
 }
 
@@ -31,4 +31,4 @@ var list = new linkedlist('first')
     .addToHead('third')
     .addToHead('fourth');
 
-    console.log(list);
+console.log(list);
