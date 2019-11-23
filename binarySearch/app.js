@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 
 var binarySearch = (arr, target) => {
    arr = arr.sort();
@@ -18,10 +18,5 @@ var binarySearch = (arr, target) => {
    return -1;
 }
 
-// Should return 1
-console.log(binarySearch([1,2,3,4,5,6], 2));
-
-// Unsorted should return 6
-console.log(binarySearch([3,5,8,1,2,4,6], 8));
-
+module.exports = binarySearch;
 
