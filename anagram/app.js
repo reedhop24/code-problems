@@ -16,14 +16,4 @@ function anagram(str, compare) {
     }
 }
 
-// should return true
-console.log(anagram('listen', 'silent'));
-
-// should return true
-console.log(anagram('reed', 'deer'));
-
-// should return false
-console.log(anagram('false', 'true'));
-
-// should return false 
-console.log(anagram('false', 'flalse')); 
+module.exports = anagram;
