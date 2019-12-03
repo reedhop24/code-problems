@@ -1,0 +1,17 @@
+{
+  "name": "memoization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^24.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon memoization.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
