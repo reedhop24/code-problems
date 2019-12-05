@@ -1,0 +1,16 @@
+{
+  "name": "linked-list-unique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "list.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon list.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1"
+  }
+}
