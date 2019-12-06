@@ -1,9 +1,14 @@
+/* eslint-disable indent */
 'use strict';
+function add(arr, target){
+    var map = new Map();
+    for(var i = 0, l = arr.length; i < l; i++){
+        if(map.has(target - arr[i])){
+            var val1 = map.get(target - arr[i]);
+            return [val1, i];
+        }
+        map.set(arr[i], i);
+    }
+}
 
-var plusOne = function(digits) {
-  let int = BigInt(digits.join(''));
-  int += BigInt(1);
-  return int.toString().split('').map((x) => {return parseInt(x);});
-};
 
-console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]));
