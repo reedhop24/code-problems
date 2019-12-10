@@ -1,14 +1,16 @@
 /* eslint-disable indent */
 'use strict';
-function add(arr, target){
-    var map = new Map();
-    for(var i = 0, l = arr.length; i < l; i++){
-        if(map.has(target - arr[i])){
-            var val1 = map.get(target - arr[i]);
-            return [val1, i];
+var singleNumber = function(nums) {
+    let map = new Map();
+    for(let i = 0, l = nums.length; i < l; i++){
+        if(map.has(nums[i])){
+            map.delete(nums[i]);
+        } else {
+            map.set(nums[i]);
         }
-        map.set(arr[i], i);
     }
-}
+    return map.entries().next().value[0];
+};
 
+console.log(singleNumber([4,1,2,1,2]));
 
