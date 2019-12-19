@@ -54,7 +54,6 @@ BST.add(5);
 BST.add(9); 
 BST.add(27); 
 
-
 var traversal = function(tree) {
     var root = tree.root;
     var max = [];
@@ -70,5 +69,3 @@ var traversal = function(tree) {
     inorder(root);
     return Math.max(...max);
 };
-
-console.log(traversal(BST));

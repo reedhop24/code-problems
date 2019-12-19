@@ -11,7 +11,7 @@ class linkedlist{
         let current = {value};
         current.next = this.head;
         this.head = current;
-        this.length--;
+        this.length++;
         return this;
     }
 
@@ -26,9 +26,7 @@ class linkedlist{
     }
 }
 
-var list = new linkedlist('first')
+var list = new linkedlist('third')
     .addToHead('second')
-    .addToHead('third')
-    .addToHead('fourth');
-
-console.log(list);
+    .addToHead('second')
+    .addToHead('third');
